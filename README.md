@@ -2,6 +2,10 @@
 
 A new Flutter application.
 
+# Follow my youtube channel
+
+https://www.youtube.com/user/MOURYAAVADHESH
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
