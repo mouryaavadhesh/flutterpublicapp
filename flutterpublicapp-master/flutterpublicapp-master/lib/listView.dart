@@ -42,10 +42,10 @@ class BodyLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return _myListView(context);
+    return _myListView();
   }
 
-  Widget _myListView(BuildContext) {
+  Widget _myListView() {
     return ListView(
       children: <Widget>[
         ListTile(
