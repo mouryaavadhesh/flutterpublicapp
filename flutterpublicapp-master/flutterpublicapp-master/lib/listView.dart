@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 
-// runApp() is a builtin method that initializes the app layout
-// MyApp() (see below) is a widget that will be the root of our application.
 
-void main() => runApp(ListExample());
-
-// the root widget of our application
 class ListExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

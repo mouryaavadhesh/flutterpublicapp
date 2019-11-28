@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutterpublicapp/listView.dart';
 import 'package:flutterpublicapp/listViewClick.dart';
 
+// runApp() is a builtin method that initializes the app layout
+// MyApp() (see below) is a widget that will be the root of our application.
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
