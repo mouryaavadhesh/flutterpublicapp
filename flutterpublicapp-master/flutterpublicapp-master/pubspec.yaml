@@ -24,7 +24,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   google_fonts: ^0.3.3
-  flutter_money_formatter: ^0.8.3
 
 dev_dependencies:
   flutter_test:
