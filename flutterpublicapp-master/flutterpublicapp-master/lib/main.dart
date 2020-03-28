@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterpublicapp/listView.dart';
 import 'package:flutterpublicapp/listViewClick.dart';
+import 'package:flutterpublicapp/login.dart';
 
 // runApp() is a builtin method that initializes the app layout
 // MyApp() (see below) is a widget that will be the root of our application.
@@ -83,37 +85,57 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           Padding(
               padding: EdgeInsets.all(10.0),
-              child: Column(
-                children: <Widget>[
-                  RaisedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ListExample()),
-                      );
-                    },
-                    child: Text(
-                      'Simple List View',
-                      style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic),
-                      textAlign: TextAlign.start,
+              child: Align(
+                alignment: Alignment.center,
+                child: Column(
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ListExample()),
+                        );
+                      },
+                      child: Text(
+                        'Simple List View',
+                        style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic),
+                        textAlign: TextAlign.start,
+                      ),
                     ),
-                  ),
-                  RaisedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ListExampleClick()),
-                      );
-                    },
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    color: Colors.red,
-                    textColor: Colors.yellow,
-                    splashColor: Colors.green,
-                    child: Text('Click List View',
-                        style: TextStyle(fontSize: 20),
-                        textAlign: TextAlign.start),
-                  ),
-                ],
+                    Padding(padding: EdgeInsets.all(10),),
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ListExampleClick()),
+                        );
+                      },
+                      padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      color: Colors.red,
+                      textColor: Colors.yellow,
+                      splashColor: Colors.green,
+                      child: Text('Click List View',
+                          style: TextStyle(fontSize: 20),
+                          textAlign: TextAlign.start),
+                    ),
+                    Padding(padding: EdgeInsets.all(10),),
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Login()),
+                        );
+                      },
+                      padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      color: Colors.cyanAccent,
+                      textColor: Colors.black,
+                      splashColor: Colors.green,
+                      child: Text('Login',
+                          style: TextStyle(fontSize: 20),
+                          textAlign: TextAlign.start),
+                    ),
+                  ],
+                ),
               )),
         ],
       ),
