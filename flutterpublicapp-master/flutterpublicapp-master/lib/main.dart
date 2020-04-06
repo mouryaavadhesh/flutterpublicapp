@@ -134,6 +134,20 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: TextStyle(fontSize: 20),
                           textAlign: TextAlign.start),
                     ),
+                    Padding(padding: EdgeInsets.all(10),),
+                    ShaderMask(
+                      //Use when applying he shader to the child
+                      blendMode: BlendMode.srcATop,
+                      shaderCallback: (Rect bound){
+                        return LinearGradient(
+                            colors: <Color>[Colors.amber,Colors.deepOrange]
+                        ).createShader(bound);
+                      },
+                      child: Text('Shader Mask',
+                          style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.start),
+                    ),
+
                   ],
                 ),
               )),
