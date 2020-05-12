@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterpublicapp/containerWidget.dart';
 import 'package:flutterpublicapp/listView.dart';
 import 'package:flutterpublicapp/listViewClick.dart';
 import 'package:flutterpublicapp/login.dart';
@@ -147,7 +148,22 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
                           textAlign: TextAlign.start),
                     ),
-
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ExampleContainerWidget()),
+                        );
+                      },
+                      padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      color: Colors.cyanAccent,
+                      textColor: Colors.black,
+                      splashColor: Colors.green,
+                      child: Text('Container Widget',
+                          style: TextStyle(fontSize: 20),
+                          textAlign: TextAlign.start),
+                    ),
+                    Padding(padding: EdgeInsets.all(10),),
                   ],
                 ),
               )),
