@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterpublicapp/containerWidget.dart';
+import 'package:flutterpublicapp/container_pages/container_part1.dart';
+import 'package:flutterpublicapp/container_pages/container_part2.dart';
 import 'package:flutterpublicapp/listView.dart';
 import 'package:flutterpublicapp/listViewClick.dart';
 import 'package:flutterpublicapp/login.dart';
@@ -152,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ExampleContainerWidget()),
+                          MaterialPageRoute(builder: (context) => ExampleContainerPart1()),
                         );
                       },
                       padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -160,6 +161,22 @@ class _MyHomePageState extends State<MyHomePage> {
                       textColor: Colors.black,
                       splashColor: Colors.green,
                       child: Text('Container Widget',
+                          style: TextStyle(fontSize: 20),
+                          textAlign: TextAlign.start),
+                    ),
+                    Padding(padding: EdgeInsets.all(10),),
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ExampleContainerPart2()),
+                        );
+                      },
+                      padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      color: Colors.cyanAccent,
+                      textColor: Colors.black,
+                      splashColor: Colors.green,
+                      child: Text('Container  Part 2',
                           style: TextStyle(fontSize: 20),
                           textAlign: TextAlign.start),
                     ),
