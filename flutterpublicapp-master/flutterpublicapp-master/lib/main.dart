@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterpublicapp/container_pages/container_part1.dart';
 import 'package:flutterpublicapp/container_pages/container_part2.dart';
+import 'package:flutterpublicapp/dialog_pages/about_dialog.dart';
 import 'package:flutterpublicapp/listView.dart';
 import 'package:flutterpublicapp/listViewClick.dart';
 import 'package:flutterpublicapp/login.dart';
@@ -181,6 +182,21 @@ class _MyHomePageState extends State<MyHomePage> {
                           textAlign: TextAlign.start),
                     ),
                     Padding(padding: EdgeInsets.all(10),),
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => AboutDialogDemo()),
+                        );
+                      },
+                      padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      color: Colors.cyanAccent,
+                      textColor: Colors.black,
+                      splashColor: Colors.green,
+                      child: Text('About Dialog Demo',
+                          style: TextStyle(fontSize: 20),
+                          textAlign: TextAlign.start),
+                    ),
                   ],
                 ),
               )),
